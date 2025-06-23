@@ -1,0 +1,51 @@
+/* input component */
+.input-text {
+    text-align: left;
+    padding: 8px;
+}
+
+.input-text svg {
+    padding-right: 8px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.input-text input {
+    border: none;
+    border-bottom: 1px solid red;
+    box-sizing: border-box;
+}
+
+.input-text label {
+    display: block;
+    padding-bottom: 8px;
+}
+
+.input-text input:invalid+label {
+    color: red;
+    border: 1px solid red;
+}
+
+/* button component */
+button {
+    color: white;
+    background-color: #bb000e;
+    border: none;
+    padding: 6px;
+}
+
+button svg {
+    padding-right: 8px;
+}
+
+button:focus {
+    background-color: #e31c25;
+}
+
+/* search bar */
+.search-bar {
+    color: rgba(44, 44, 44, 0.6);
+    border-radius: 15px;
+    border: 1px solid black;
+    padding-right: 16px;
+    padding-left: 16px;
+}
