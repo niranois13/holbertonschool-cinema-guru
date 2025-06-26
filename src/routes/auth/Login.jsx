@@ -10,7 +10,7 @@ export default function Login({ username = "", password = "", setUsername, setPa
                 <Input label="Password:" type="password" className='login-input' value={password} setValue={setPassword} />
             </div>
             <div className='auth-buttons'>
-                <Button label="Sign In" type="submit" className="login-button" onClick={() => { }} />
+                <Button label="Sign In" type="submit" className="login-button"/>
             </div>
         </>
     )
