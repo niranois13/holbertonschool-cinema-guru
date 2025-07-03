@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #161616;
+    height: 62px;
+    width: auto;
+    padding: 0 30px 0 30px;
+}
+
+.nav-header a {
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav-right-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right-side p {
+    color: #FFFFFF;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+.nav-avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #BB000E;
+}
+
+.nav-logout {
+    cursor: pointer;
+    color: red;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+.sidebar-nav-container.small {
+    width: 50px;
+    transition: width 0.2s;
+}
+
+.sidebar-nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #BB000E;
+    min-height: 100vh;
+    width: 218px;
+    color: #FFFFFF;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+}
+
+.navigation-ul {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 218px;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-nav-container.small .navigation-ul li {
+    justify-content: center;
+    padding-left: 0;
+    width: 100%;
+}
+
+.sidebar-nav-container.small .navigation-ul li:first-child {
+    background-color: #E31C25;
+    width: 50px;
+}
+
+.navigation-ul li {
+    list-style: none;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-left: 16px;
+    margin: 0;
+}
+
+.navigation-ul li.active {
+    background-color: #E31C25;
+}
+
+.navigation-ul li .arrow-icon {
+    margin-left: auto;
+    padding-right: 16px;
+}
+
+.activity-ul {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 206px;
+    background-color: #2C2C2C;
+    align-items: center;
+}
+
+.activity-ul h3 {
+    text-decoration: underline;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+}

@@ -1,13 +1,7 @@
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-}
-
 /* Wrapper for Authentication component */
 .auth-container {
+    display: flex;
+    flex-direction: column;
     width: 450px;
     height: 361px;
     position: absolute;
@@ -17,8 +11,8 @@ body {
     background-color: white;
 }
 
-/* Optional header for title */
 .auth-container h3 {
+    font-family: Roboto, sans-serif;
     font-size: 19px;
     font-weight: normal;
     padding-top: 10px;
@@ -26,10 +20,10 @@ body {
     text-align: center;
 }
 
-/* Switch buttons at top */
 .auth-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
 }
 
 .auth-header button {
@@ -41,75 +35,40 @@ body {
     font-size: 16px;
 }
 
-/* Login/Register container */
+.auth-header button:focus {
+    background-color: #BB000E;
+}
+
 .auth-content {
     padding: 20px 40px;
 }
 
-/* Inputs area */
+.auth-icon {
+    color: #FBDDDE !important;
+}
+
 .auth-inputs {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    padding: 0 50px 30px 50px;
 }
 
-/* Bottom button area (submit) */
 .auth-buttons {
+    font-size: 15px;
+    width: auto;
+    height: 34px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    padding: 0 50px 0 0;
 }
 
-/* General input styling */
 .input-text {
     text-align: left;
     padding: 8px;
     width: 100%;
 }
 
-.input-text svg {
-    padding-right: 8px;
-    color: rgba(0, 0, 0, 0.4);
-}
-
 .input-text input {
     width: 100%;
-    border: none;
-    border-bottom: 1px solid red;
-    box-sizing: border-box;
-}
-
-.input-text label {
-    display: block;
-    padding-bottom: 8px;
-}
-
-.input-text input:invalid+label {
-    color: red;
-    border: 1px solid red;
-}
-
-/* General button styling */
-button {
-    color: white;
-    background-color: #bb000e;
-    border: none;
-    padding: 6px;
-}
-
-button svg {
-    padding-right: 8px;
-}
-
-button:focus {
-    background-color: #e31c25;
-}
-
-/* Search bar */
-.search-bar {
-    color: rgba(44, 44, 44, 0.6);
-    border-radius: 15px;
-    border: 1px solid black;
-    padding-right: 16px;
-    padding-left: 16px;
 }

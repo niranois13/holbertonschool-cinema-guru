@@ -24,9 +24,14 @@ export default function Authentication({ setIsLoggedIn, setUserUsername }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const endpoint = _switch ? 'login' : 'register';
+        const endpoint = _switch 
+        ? 'http://localhost:8000/api/auth/login'
+        : 'http://localhost:8000/api/auth/register';
 
-        await axios.post(`http://localhost:8000/api/auth/${endpoint}`, { username, password })
+        await axios.post(endpoint, { 
+            username: username, 
+            password: password 
+        })
             .then((res) => {
                 const token = res.data?.accessToken;
                 if (token) {
@@ -43,7 +48,7 @@ export default function Authentication({ setIsLoggedIn, setUserUsername }) {
 
     return (
         <div className='auth-container'>
-            <form className='auth-header' onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div className='auth-header'>
                     <Button label="Sign In" type="button" className="sign-in-button" onClick={handleSignIn} />
                     <Button label="Sign Up" type="button" className="sign-up-button" onClick={handleSignUp} />

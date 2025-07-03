@@ -4,7 +4,7 @@ import './general.css';
 export default function Button({label = '', className = '', onClick, icon}) {
     return (
         <button className={className} onClick={onClick}>
-            {icon && <FontAwesomeIcon icon={icon}/>}
+            {icon && <span>{icon}</span>}
             {label}
         </button>
     )

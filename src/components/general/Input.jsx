@@ -15,11 +15,15 @@ export default function Input({
 
     return (
         <div className={`input-text ${className}`}>
-            <label>{label}</label>
-            <div>
-                {icon && <span>{icon}</span>}
-                <input type={type} value={value} onChange={handleInput} {...inputAttributes} />
-            </div>
+            {icon ? (
+                <div className="icon-label">
+                    <span>{icon}</span>
+                    <label>{label}</label>
+                </div>
+            ) : (
+                <label>{label}</label>
+            )}
+            <input type={type} value={value} onChange={handleInput} {...inputAttributes} />
         </div>
     )
 }
