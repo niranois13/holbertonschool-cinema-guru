@@ -55,7 +55,7 @@ export default function SideBar({ userUsername, activityTrigger }) {
 
     return (
         small ? (
-            <nav className='sidebar-nav-container small' onMouseEnter={() => setSmall(false)} onMouseLeave={() => setSmall(true)}>
+            <nav className='sidebar-nav-container small' onMouseEnter={() => setSmall(false)}>
                 <ul className='navigation-ul small'>
                     <li onClick={() => setPage('Home')}><FontAwesomeIcon icon={faFolder} /></li>
                     <li onClick={() => setPage('Favorites')}><FontAwesomeIcon icon={faStar} /></li>
@@ -63,7 +63,7 @@ export default function SideBar({ userUsername, activityTrigger }) {
                 </ul>
             </nav>
         ) : (
-            <nav className="sidebar-nav-container large">
+            <nav className="sidebar-nav-container large" onMouseLeave={() => setSmall(true)}>
                 <ul className='navigation-ul'>
                     <li
                         className={selected === 'Home' ? 'active' : ''}
